@@ -1,11 +1,11 @@
-import Link from 'next/link';
+import PostDashboard from '../src/components/PostDashboard';
 
-const home = () => {
+const Home = () => {
   return (
-    <>
-      <Link href="/posts">Posts</Link>
-    </>
+    <div className="container mx-auto md:px-4">
+      <PostDashboard />
+    </div>
   );
 };
 
-export default home;
+export default Home;
