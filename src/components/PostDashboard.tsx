@@ -1,11 +1,12 @@
 import Post from './Post';
 
-const PostDashboard = () => {
+const PostDashboard = ({ posts }) => {
   return (
-    <Post
-      title="Post 1"
-      description="This is a short post about something idk This is a short post about something idk This is a short post about something idk This is a short post about something idk This is a short post about something idk "
-    />
+    <div className="grid grid-cols-3 gap-6 justify-items-center">
+      {posts.map((post) => (
+        <Post title={post.title} content={post.content} />
+      ))}
+    </div>
   );
 };
 
