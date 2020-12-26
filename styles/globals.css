@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'fade.css';
+
 button {
   outline: none !important;
 }

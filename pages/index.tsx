@@ -3,6 +3,7 @@ import PostDashboard from '../src/components/PostDashboard';
 import db from '../db/db';
 import NoPosts from '../src/components/NoPosts';
 import CreatePost from '../src/components/CreatePost';
+import { CSSTransition } from 'react-transition-group';
 
 export async function getServerSideProps(context) {
   return {
@@ -33,7 +34,9 @@ const Home = ({ posts }) => {
           handleCloseNewPost={handleCloseNewPost}
         />
       )}
-      {openNewPost && <CreatePost />}
+      <CSSTransition in={openNewPost} timeout={300} classNames="fade" appear>
+        <CreatePost />
+      </CSSTransition>
     </div>
   );
 };
