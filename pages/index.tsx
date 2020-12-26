@@ -39,7 +39,7 @@ const Home = ({ posts }) => {
         in={openNewPost}
         timeout={300}
         classNames="fade"
-        appear={true}
+        appear
       >
         <CreatePost />
       </CSSTransition>
