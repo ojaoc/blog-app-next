@@ -34,7 +34,13 @@ const Home = ({ posts }) => {
           handleCloseNewPost={handleCloseNewPost}
         />
       )}
-      <CSSTransition in={openNewPost} timeout={300} classNames="fade" appear>
+      <CSSTransition
+        unmountOnExit
+        in={openNewPost}
+        timeout={300}
+        classNames="fade"
+        appear={true}
+      >
         <CreatePost />
       </CSSTransition>
     </div>
