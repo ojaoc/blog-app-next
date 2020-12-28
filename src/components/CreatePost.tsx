@@ -1,11 +1,11 @@
 import React from 'react';
 import Button from './lib/Button';
 import Input from './lib/Input';
-import { useForm } from './lib/hooks';
 import { ImCross } from 'react-icons/im';
+import { useForm } from 'react-hook-form';
 
 const CreatePost = ({ handleCloseNewPost }) => {
-  const [{ title, content }, handleChangeForm] = useForm({ title: '' });
+  const { register, handleSubmit, errors } = useForm<FormData>();
 
   return (
     <div className="top-0 inset-x-0 fixed">
@@ -21,15 +21,13 @@ const CreatePost = ({ handleCloseNewPost }) => {
               <Input
                 id="title"
                 name="title"
-                onChange={handleChangeForm}
-                value={title}
+                ref={register({ required: true })}
                 label="Title"
               />
               <Input
                 id="content"
                 name="content"
-                onChange={handleChangeForm}
-                value={content}
+                ref={register({ required: true })}
                 rows={6}
                 label="Content"
               />

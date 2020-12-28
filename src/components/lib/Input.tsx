@@ -1,14 +1,15 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import clsx from 'clsx';
 
 type InputProps = {
   id: string;
   name: string;
   label: string;
-  value: string;
+  value?: string;
   placeholder?: string;
   rows?: number | string;
-  onChange: () => void;
+  ref?: IntrinsicAttributes & InputProps;
+  onChange?: () => void;
 };
 
 const Input = (props: InputProps) => {
@@ -18,8 +19,8 @@ const Input = (props: InputProps) => {
     setIsFocus(true);
   };
 
-  const handleBlur = () => {
-    if (props.value) return;
+  const handleBlur = (e) => {
+    if (e.target.value) return;
     setIsFocus(false);
   };
 
