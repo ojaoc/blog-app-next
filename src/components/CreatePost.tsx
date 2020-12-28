@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from './lib/Button';
 import Input from './lib/Input';
 import { useForm } from './lib/hooks';
@@ -11,9 +11,23 @@ const CreatePost = () => {
       <div className="w-sreen h-screen bg-black opacity-70">
         <div className="flex justify-center w-screen">
           <div className="bg-white md:rounded-xl w-screen md:w-2/3 p-10">
-            <Input name="title" onChange={handleChangeForm} value={title} />
-            <Input name="content" onChange={handleChangeForm} value={content} />
-            <Button onClick={console.log}>Submit</Button>
+            <div className="flex">
+              <Input
+                id="title"
+                name="title"
+                onChange={handleChangeForm}
+                value={title}
+                label="Title"
+              />
+              <Input
+                id="title"
+                name="content"
+                onChange={handleChangeForm}
+                value={content}
+                label="Content"
+              />
+              <Button onClick={console.log}>Submit</Button>
+            </div>
           </div>
         </div>
       </div>
