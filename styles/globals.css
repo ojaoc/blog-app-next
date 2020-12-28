@@ -4,6 +4,6 @@
 
 @import 'fade.css';
 
-button, input {
+button, input, textarea {
   outline: none !important;
 }

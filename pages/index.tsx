@@ -41,7 +41,7 @@ const Home = ({ posts }) => {
         classNames="fade"
         appear
       >
-        <CreatePost />
+        <CreatePost handleCloseNewPost={handleCloseNewPost} />
       </CSSTransition>
     </div>
   );
