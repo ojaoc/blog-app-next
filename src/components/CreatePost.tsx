@@ -11,10 +11,10 @@ const CreatePost = ({ handleCloseNewPost }) => {
     <div className="top-0 inset-x-0 fixed">
       <div className="w-sreen h-screen bg-black bg-opacity-80">
         <div className="flex justify-center w-screen">
-          <div className="bg-white bg-opacity-100 md:rounded-xl w-screen md:w-1/3 p-8 md:transform md:translate-y-10">
+          <div className="bg-white bg-opacity-100 sm:rounded-xl h-screen sm:h-auto w-screen md:w-8/12 xl:w-6/12 max-w-xl p-8 sm:transform sm:translate-y-10">
             <div className="flex justify-end mb-8">
               <button onClick={handleCloseNewPost}>
-                <ImCross className="text-xs text-gray-900" />
+                <ImCross className="text-xs text-gray-800" />
               </button>
             </div>
             <div className="flex flex-col space-y-6 items-center px-6">
